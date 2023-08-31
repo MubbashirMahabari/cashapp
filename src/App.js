@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+
+import "./component/style.css";
+import Hero from './component/hero'
+import Payments from './component/payment'
+import Banking from './component/banking'
+import Boost from './component/boost'
+import Investing from './component/investing'
+import FooterMobile from './component/footermobile'
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className='snap-y snap-mandatory h-[100vh] overflow-y-scroll m-0 smlap:hidden'>
+        <Hero/>
+        <Payments/>
+        <Banking/>
+        <Boost/>
+        <Investing/>
+      </div>
+      <div className='snap-y snap-mandatory h-[100vh] overflow-y-scroll m-0 revsmlap:hidden'>
+        <Hero/>
+        <Payments/>
+        <Banking/>
+        <Boost/>
+        <Investing/>
+        <FooterMobile/>
+      </div>
+    </>
   );
 }
 
